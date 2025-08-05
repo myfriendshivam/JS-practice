@@ -26,3 +26,30 @@ console.log(typeof "shivam");
 
 // null => object
 // undefined => undefined
+
+//------------------- data types Summary ----------------------
+// Primitive
+// 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
+
+// symbol def
+const id = Symbol('123')
+const anotherId = Symbol('123')
+
+console.log(id === anotherId);
+
+const bigNumber = 345678345553496n
+
+// JS is a statically or dynamically typed language?
+
+// Non primitive or referance type
+// Array, Objects, Functions
+
+const heros  = ["shaktiman", "naagraj", "doga"]
+
+let Obj = {name: "Shivam", age: 17}
+
+const myfunction = function(){
+    console.log("Hello word!");
+}
+
+console.log(typeof anotherId);
