@@ -50,3 +50,34 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 // loop through time check the final value
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// Object destructuring
+const course = {
+    coursename: "JS in Hindi",
+    price: "999",
+    courseInstructor: "John"
+}
+
+// course.courseInstructor
+const {courseInstructor: instructor} = course
+// console.log(courseInstructor);
+console.log(instructor);
+
+const navbar = ({company}) => {
+
+}
+navbar(company = "John")
+
+// API
+/*{
+    "name": "John",
+    "cousrename": "js in hindi",
+    "price": "free"
+} */
+
+/*
+[
+    {},
+    {}
+]
+*/
