@@ -14,7 +14,6 @@ for (let D = 0; D <= 5; D++) {
     for (let j = 0; j <= 5 ; j++) {
         console.log(`Inner loop value ${j} and inner loop ${D}`);
         console.log(D + '*' + j + '=' + D*j);
-        
     }
 }
 
