@@ -44,3 +44,40 @@ title.style.padding = '15px'
 title.innerHTML -> all content with style properties
 title.innerText -> only visible to screen
 title.textContent -> all content show if hidden by style
+
+document.getElementByClassName('heading')
+
+//Query Selector
+
+document.querySelector('h1')
+
+document.querySelector('#title')
+
+document.querySelector('.heading')
+
+document.querySelector('input[tylpe="password"]')
+
+document.querySelector('p:first-child')
+
+const myul = document.querySelector('ul')
+
+const turngreen = myul.querySelector('li')
+turngreen.style.backgroundColor = "green"
+turngreen.innerHTML = "five"
+
+const tempList = document.querySelectorAll('li')  // node list
+tempList.style.color = 'green' // not work
+tempList[0].style.color = 'green'
+
+tempList.forEach(function(l) {
+  l.style.backgroundColor = 'green'
+})
+
+
+const tempClassList = document.getElementByClassName('list-item') // HTMLCollection
+const myConvertedArray = Array.from(tempClassList)  // convert HTMLCollection to Array
+myConvertedArray.forEach( function(li) {
+  li.style.color = "blue"
+})
+
+
