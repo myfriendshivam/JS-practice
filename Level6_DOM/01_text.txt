@@ -1,0 +1,46 @@
+//These code run in browser console
+
+console.log(window)
+console.log(window.document)
+console.log(document)
+
+console.dir.(document)
+
+                 window
+
+                document
+
+                  HTML
+
+          Head                        body
+      
+      title      meta                  div  ->  attribute
+    text node    attribute        
+                                    H1                 p
+                         attribute   text node     text node
+
+
+console.log(document).baseURI
+console.log(document.links)
+
+
+
+document.getElementById('firstHeading').innerHTML = "<h1>Chai aur Code</h1>"
+
+document.getElementById('title')
+
+document.getElementById('title').id
+document.getElementById('title').className
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('class')
+
+document.getElementById('title').setAttribute('class', 'test heading') -> more than one class
+
+const title = document.getElementById('title')
+
+title.style.backgroundColor = 'green'
+title.style.padding = '15px'
+
+title.innerHTML -> all content with style properties
+title.innerText -> only visible to screen
+title.textContent -> all content show if hidden by style
