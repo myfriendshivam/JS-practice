@@ -6,7 +6,6 @@ buttons.forEach(function (button){
         console.log(e);
         console.log(e.target);
         
-        
         switch (e.target.id) {
             case "grey":
                 body.style.backgroundColor = e.target.id;
