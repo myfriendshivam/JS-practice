@@ -33,7 +33,7 @@ function validateGuess(guess){
         alert('Please enter a number less than 100'); 
     }else {
         prevGuess.push(guess);
-        if(numGuess === 11){
+        if(newGuess === 11){
             displayGuess(guess);
             displayMessage(`Game Over. Random number was ${randomNumber}`);
             endGame();
@@ -58,8 +58,8 @@ function checkGuess(guess){
 function displayGuess(guess){
     userInput.value = '';
     guessSlot.innerHTML += `${guess}, `;
-    numGuess++;
-    remaining.innerHTML = `${11 - numGuess}`;
+    newGuess++;
+    remaining.innerHTML = `${11 - newGuess}`;
 }
 
 function displayMessage(message){
