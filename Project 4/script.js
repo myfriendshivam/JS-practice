@@ -68,7 +68,7 @@ function displayMessage(message){
 
 function endGame(){
     userInput.value = '';
-    userInput.setAttribute('disabled', '');
+    userInput.setAttribute('disabled', ''); // disable guess input tag
     p.classList.add('button');
     p.innerHTML = `<h2 id="newGame>Start new Game</h2>`;
     startover.appendChild(p);
@@ -84,7 +84,7 @@ function newGame(){
         newGuess = 1;
         guessSlot.innerHTML = '';
         remaining.innerHTML = `${11 - newGuess}`;
-        userInput.removeAttribute('disabled');
+        userInput.removeAttribute('disabled'); //set attribute remove
         startover.removeChild(p);
 
         playGame = true;
