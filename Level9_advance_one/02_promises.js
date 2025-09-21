@@ -1,47 +1,46 @@
 
-// const promiseOne = new Promise(function(resolve, reject) {
-//     //Do an async task
-//     //DB calls, cryptography, network
-//     setTimeout(function(){
-//         console.log('Async task is complete');
-//         resolve()
-//     }, 1000)
-// })
+const promiseOne = new Promise(function(resolve, reject) {
+    //Do an async task
+    //DB calls, cryptography, network
+    setTimeout(function(){
+        console.log('Async task is complete');
+        resolve()
+    }, 1000)
+})
 
-// promiseOne.then(function(){
-//     console.log("Promise consumed");
-// }).catch((error)=> {
-//     console.log(error);
-// })
-
-
-
-// new promiseOne(function(resolve, reject){
-//     setTimeout(function(){
-//         console.log("Sync task 2");
-//         resolve()
-//     }, 1000)
-// }).then(function(){
-//     console.log("Async 2 resolved");
-// })
-
-
-// const promiseThree = new promiseOne(function(resolve, reject){
-//     setTimeout(function(){
-//         resolve({username: "shivam", email: "shivam123@gmail.com"})
-//     }, 1000)
-// })
-
-// promiseThree.then(function(user){
-//     console.log(user);
-// }).catch((error)=> {
-//     console.log(error);
-    
-// })
+promiseOne.then(function(){
+    console.log("Promise consumed");
+}).catch((error)=> {
+    console.log(error);
+})
 
 
 
-const promiseFour = new promiseOne(function(resolve, reject){
+new Promise(function(resolve, reject){
+    setTimeout(function(){
+        console.log("Async task 2");
+        resolve()
+    }, 1000)
+}).then(function(){
+    console.log("Async 2 resolved");
+})
+
+
+const promiseThree = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        resolve({username: "shivam", email: "shivam123@gmail.com"})
+    }, 1000)
+})
+
+promiseThree.then(function(user){
+    console.log(user);
+}).catch((error)=> {
+    console.log(error);
+})
+
+
+
+const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = true  // false
         if(!error){
@@ -84,14 +83,23 @@ async function consumePromiseFive(){
 
 consumePromiseFive()
 
-async function getAllUsers() {
-    try {
-        const response = await fetch(' https://jsonplaceholder.typicode.com/users')
-        const data = await response.json()
-        console.log(data);
-    } catch (error){
-        console.log("E: ",error);
-    }
-}
+// async function getAllUsers() {
+//     try {
+//         const response = await fetch(' https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json()
+//         console.log(data);
+//     } catch (error){
+//         console.log("E: ",error);
+//     }
+// }
 
-getAllUsers()
+//getAllUsers()
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response)=>{
+    return response.json()
+})
+.then((data)=> {
+    console.log(data);
+})
+.catch((error)=> console.log(error))
